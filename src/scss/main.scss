@@ -24,6 +24,7 @@
 @import "common/global";
 @import "common/typography";
 @import "common/icons";
+@import "common/forms";
 
 /*———————————————————————————————————*\
     $ HELPERS
@@ -40,15 +41,9 @@
     $ MODULES
 \*———————————————————————————————————*/
 @import "modules/cards";
-
-/*———————————————————————————————————*\
-    $ LAYOUTS
-\*———————————————————————————————————*/
-@import "layouts/headers";
-@import "layouts/navbars";
-@import "layouts/footers";
-@import "layouts/forms";
-
+@import "modules/headers";
+@import "modules/navbars";
+@import "modules/footers";
 /*———————————————————————————————————*\
     $ PAGES
 \*———————————————————————————————————*/
