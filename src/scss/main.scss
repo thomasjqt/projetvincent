@@ -1,3 +1,57 @@
-body{
-    background-color: red;
+/*———————————————————————————————————*\
+    $ VARIABLES & MINXINS
+\*———————————————————————————————————*/
+@import "helpers/variables";
+@import "helpers/mixins";
+
+/*———————————————————————————————————*\
+    $ LIBS & NODE_MODULES
+
+  @exemple: @import "~bootstrap/dist/css/bootstrap";
+  @see:     https://github.com/webpack-contrib/sass-loader#imports
+\*———————————————————————————————————*/
+
+/*———————————————————————————————————*\
+    $ GOOGLE FONT
+
+  @exemple: @import url('https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,700');
+  @see:     https://fonts.google.com/
+\*———————————————————————————————————*/
+
+/*———————————————————————————————————*\
+    $ COMMON
+\*———————————————————————————————————*/
+@import "common/global";
+@import "common/typography";
+@import "common/icons";
+
+/*———————————————————————————————————*\
+    $ HELPERS
+\*———————————————————————————————————*/
+@import "helpers/classes";
+@import "helpers/extends";
+
+/*———————————————————————————————————*\
+    $ ELEMENTS
+\*———————————————————————————————————*/
+@import "elements/buttons";
+
+/*———————————————————————————————————*\
+    $ MODULES
+\*———————————————————————————————————*/
+@import "modules/cards";
+
+/*———————————————————————————————————*\
+    $ LAYOUTS
+\*———————————————————————————————————*/
+@import "layouts/headers";
+@import "layouts/navbars";
+@import "layouts/footers";
+@import "layouts/forms";
+
+/*———————————————————————————————————*\
+    $ PAGES
+\*———————————————————————————————————*/
+.homepage { // <body class="homepage">
+  @import "pages/homepage";
 }
