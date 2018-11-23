@@ -1,137 +1,191 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>projet vincent</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
-    <script src="../src/js/main.js"></script>
-    
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>projet vincent</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+  <script src="../src/js/main.js"></script>
+
 </head>
+
 <body>
 
-    <div class="maindiv">
-
-        <div class="sidebar">
-
-        </div>
-
-        <div class="top nav">
-            <div class="recherche">
-
-            </div>
-            <div class="utilisateur">
-
-            </div>
-        </div>
-
-        <!-- DASHBOARD    -->
-        <div class="dashboard">
-
-            <div class="topdashboard">
-                <!-- MOYENNE-->
-                <div class="infoMoyenne">
-                    <div class="mainMoyenne">
-                    </div>
-                    <div class="note">
-                    </div>
-
-                    <div class="fleche">
-                    </div>
-
-                    <div class="moyenne"></div>
-                    </div>
-
-                </div>
-
-                <!-- /MOYENNE -->
-                <!-- CLASSEMENT -->
-                <div class="mainClassement">
-                    <div class="classement">
-                    </div>
-
-                    <div class="position">
-                    </div>
-
-                    <div class="flecheClassement">
-                    </div>
-
-                    <div class="positionGenerale">
-                    </div>
-
-                </div>
-
-                <!-- /CLASSEMENT -->
-            </div>   
-            
-            <!-- middleDashboard -->
-            <div class="middleDashboard">
-
-                <div class="graphique">
-                </div>
-
-                <div class="liste">
-                </div>
-
-            </div>
-            <!-- /middleDashboard -->
-            <!-- bottomDashboard-->
-
-            <div class="bottomDashboard">
-
-                <table>
-                        <thead>
-                            <tr>
-                                <th>matière</th>
-                                <th>élève</th>
-                                <th>moyenne</th> 
-                                <th>classement</th>                                 <th></th>
-                            </tr>
-
-                        </thead>
-
-                            <tr>
-                                <td><img/></td>
-                                <td>Vincent Battez</td>
-                                <td>15</td>
-                                <td>1</td>
-                            </tr>
-                            
-                            <tr>
-                                <td><img/></td>
-                                <td>Thomas Jacquart</td>
-                                <td>14</td>
-                                <td>2</td>
-                            </tr>
-
-                            <tr>
-                                <td><img/></td>
-                                <td>Léa Cardoso</td>
-                                <td>5</td>
-                                <td>3</td>
-                            </tr>
-                       
 
 
+  <nav class="sidebar">
 
-                </table>
+  </nav>
 
-            </div>
-            <!-- /bottomDashboard-->
-            
-
-
-        </div>
-        <!-- /DASHBOARD -->
-       
-
-
-
-
-
+  <nav class="top nav">
+    <div class="recherche">
 
     </div>
+    <div class="utilisateur">
+
+    </div>
+  </nav>
+
+  <main class="dashboard">
+
+    <!-- DASHBOARD    -->
+
+    <section class="card-container">
+
+      <!--moyenne-->
+      <div class="card">
+        <h3 class="card__title"></h3>
+        <div class="card__data">
+          <div class="card__icon-container">
+            <img src="" alt="" class="card__icon">
+          </div>
+          <div class="card__data-container">
+            <p class="card__value"></p>
+            <p class="card__legend"></p>
+          </div>
+        </div>
+      </div>
+
+      <!--classement-->
+      <div class="card">
+        <h3 class="card__title"></h3>
+        <div class="card__data">
+          <div class="card__icon-container">
+            <img src="" alt="" class="card__icon">
+          </div>
+          <div class="card__data-container">
+            <p class="card__value"></p>
+            <p class="card__legend"></p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- middleDashboard -->
+    <section class="card-container">
+      <div class="card">
+        <div class="card__content">
+          <h3 class="card__title">Statistiques</h3>
+        </div>
+        <div class="card__content">
+          <div class="text-align-right">
+            <select name="" id="" class="card__filter">
+              <option value="1">1er Trimestre</option>
+              <option value="2">2ème Trimestre</option>
+            </select>
+            <table>
+              <thead>
+                <tr>
+                  <th colspan="2">matière</th>
+                  <th>moyenne</th>
+                  <th>coéfficient</th>
+                  <th>classement</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><img /></td>
+                  <td>SCSS</td>
+                  <td><span class="note">19</span>/<span class="notation">20</span></td>
+                  <td>x<span class="coefficient-value">4</span></td>
+                  <td>15<sup>ème</sup></td>
+                </tr>
+                <tr>
+                  <td><img /></td>
+                  <td>SCSS</td>
+                  <td><span class="note">19</span>/<span class="notation">20</span></td>
+                  <td>x<span class="coefficient-value">4</span></td>
+                  <td>15<sup>ème</sup></td>
+                </tr>
+                <tr>
+                  <td><img /></td>
+                  <td>SCSS</td>
+                  <td><span class="note">19</span>/<span class="notation">20</span></td>
+                  <td>x<span class="coefficient-value">4</span></td>
+                  <td>15<sup>ème</sup></td>
+                </tr>
+                <tr>
+                  <td><img /></td>
+                  <td>SCSS</td>
+                  <td><span class="note">19</span>/<span class="notation">20</span></td>
+                  <td>x<span class="coefficient-value">4</span></td>
+                  <td>15<sup>ème</sup></td>
+                </tr>
+                <tr>
+                  <td><img /></td>
+                  <td>SCSS</td>
+                  <td><span class="note">19</span>/<span class="notation">20</span></td>
+                  <td>x<span class="coefficient-value">4</span></td>
+                  <td>15<sup>ème</sup></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- /middleDashboard -->
+    <!-- bottomDashboard-->
+
+    <section class="card-container">
+      <div class="card">
+        <h3 class="card-title">Top 10 meilleurs élèves</h3>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">Élève</th>
+              <th>moyenne</th>
+              <th>classement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><img /></td>
+              <td>MICHELLE</td>
+              <td><span class="note">19</span>/<span class="notation">20</span></td>
+              <td>15<sup>ème</sup></td>
+            </tr>
+            <tr>
+              <td><img /></td>
+              <td>MICHELLE</td>
+              <td><span class="note">19</span>/<span class="notation">20</span></td>
+              <td>15<sup>ème</sup></td>
+            </tr>
+            <tr>
+              <td><img /></td>
+              <td>MICHELLE</td>
+              <td><span class="note">19</span>/<span class="notation">20</span></td>
+              <td>15<sup>ème</sup></td>
+            </tr>
+            <tr>
+              <td><img /></td>
+              <td>MICHELLE</td>
+              <td><span class="note">19</span>/<span class="notation">20</span></td>
+              <td>15<sup>ème</sup></td>
+            </tr>
+            <tr>
+              <td><img /></td>
+              <td>MICHELLE</td>
+              <td><span class="note">19</span>/<span class="notation">20</span></td>
+              <td>15<sup>ème</sup></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <!-- /bottomDashboard-->
+
+
+
+  </main>
+  <!-- /DASHBOARD -->
+
 
 </body>
+
 </html>
