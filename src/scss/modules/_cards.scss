@@ -1,0 +1,16 @@
+.card {
+  background: red;
+
+  &__title {
+    color: yellow;
+  }
+
+  &__filter {
+    color: blue;
+  }
+
+  &-container {
+    display: flex;
+  }
+
+}
