@@ -141,3 +141,5 @@ typings/
 .history
 
 # End of https://www.gitignore.io/api/git,sass,node,macos,visualstudiocode
+
+public/css

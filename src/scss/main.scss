@@ -10,6 +10,7 @@
   @exemple: @import "~bootstrap/dist/css/bootstrap";
   @see:     https://github.com/webpack-contrib/sass-loader#imports
 \*———————————————————————————————————*/
+@import "libs/normalize";
 
 /*———————————————————————————————————*\
     $ GOOGLE FONT
@@ -17,6 +18,7 @@
   @exemple: @import url('https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,700');
   @see:     https://fonts.google.com/
 \*———————————————————————————————————*/
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,700');
 
 /*———————————————————————————————————*\
     $ COMMON
@@ -44,6 +46,9 @@
 @import "modules/headers";
 @import "modules/navbars";
 @import "modules/footers";
+@import "modules/sidebar";
+
+
 /*———————————————————————————————————*\
     $ PAGES
 \*———————————————————————————————————*/

@@ -1,0 +1,74 @@
+// Body Class
+.sidebar-open {
+  margin-left: $sidebarWidth;
+}
+
+.sidebar {
+  width: $sidebarWidth;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+  }
+
+  li {
+    list-style: none;
+    
+    .link {
+      display: block;
+      position: relative;
+      padding: 15px 10px 15px 20px;
+      transition: all 300ms;
+      color: #6F747A;
+      
+      &.active, &:hover {
+        background-color: $bg-primary;
+      }
+
+      &.active {
+        color: $primary;
+
+        &:before {
+          content: '';
+          width: 3px;
+          height: 100%;
+          display: inline-block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: $primary;
+        }
+      }
+    }
+
+    &.logo {
+      text-align: center;
+
+      a {
+        display: block;
+        padding: 10px 0;
+      }
+      img {
+        width: 60px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+
+    .icon {
+      margin-right: 10px;
+    }
+  }
+}
