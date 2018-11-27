@@ -5,4 +5,7 @@ body, html {
 
 body {
   font-family: "Rubik";
-}
+  background: color(primary, bg);
+  color:$text-color;
+  font-weight: 100;
+} 

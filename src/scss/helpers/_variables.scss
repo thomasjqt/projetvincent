@@ -1,16 +1,28 @@
 /*———————————————————————————————————*\
     $ COLORS
 \*———————————————————————————————————*/
-$primary: blue;
+$primary:#009efb;
+$primary-l1: lighten($primary, 15%);
+$primary-d1: darken($primary, 15%);
+$math:#f62d51;
+$chinois:#55ce63;
+$anglais:#7460ee;
+$geographie:$primary;
+$physique:#ffbc34;
+$histoire:#2F2F2F;
+$text-color:lighten(desaturate($primary, 90%), 30%);
 
 $colors: (
   primary: (
     base: $primary,
-    light: lighten($primary, 15%),
-    dark:  darken($primary, 15%),
-    bg:    lighten($primary, 45%),
+    light: $primary-l1,
+    dark:  $primary-d1,
+    bg:    lighten(desaturate($primary, 55%), 46%),
+    gradiant: linear-gradient(to right, $primary-d1 0%, $primary-l1 100%)
   )
 );
+
+
 
 // $bg-primary: lighten($primary, 45);
 
