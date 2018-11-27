@@ -1,8 +1,8 @@
 .card {
-  background: red;
+  background: color(primary, base);
 
   &__title {
-    color: yellow;
+    color: color(primary, dark);
   }
 
   &__filter {

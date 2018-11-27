@@ -1,0 +1,40 @@
+
+// variable prefixes for CSS4 output
+$color-prefix: --color-;
+
+// retrieve color from map with Sass ie. `color(primary, base)`
+@function color($color-name, $color-variant:null) {
+  // color variant is optional
+  @if ($color-variant != null) {
+    // map inception, need two names
+    @return var(#{$color-prefix}#{$color-name}-#{$color-variant});
+  } @else {
+    // single-level color, one name
+    @return var(#{$color-prefix}#{$color-name});
+  }
+}
+
+/* ripped CSS4 vars out of color map */
+:root {
+  
+  // each item in color map
+  @each $name, $color in $colors {
+    
+    // maps require a second loop
+    @if type-of($color) == "map" {
+      
+      // each item in sub map
+      @each $subname, $subcolor in $color {  
+        // --color-primary-base
+        #{$color-prefix}#{$name}-#{$subname}: $subcolor;
+      }
+    
+    // normal colors
+    } @elseif type-of($color) == "color" {
+      
+      // --color-background
+      #{$color-prefix}#{$name}: $color;
+      
+    }
+  }
+}

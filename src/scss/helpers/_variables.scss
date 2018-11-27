@@ -1,8 +1,19 @@
 /*———————————————————————————————————*\
     $ COLORS
 \*———————————————————————————————————*/
-$primary: red;
-$bg-primary: lighten($primary, 45);
+$primary: blue;
+
+$colors: (
+  primary: (
+    base: $primary,
+    light: lighten($primary, 15%),
+    dark:  darken($primary, 15%),
+    bg:    lighten($primary, 45%),
+  )
+);
+
+// $bg-primary: lighten($primary, 45);
+
 
 /*———————————————————————————————————*\
     $ DIMENTIONS

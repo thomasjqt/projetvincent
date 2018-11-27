@@ -28,11 +28,11 @@
       color: #6F747A;
       
       &.active, &:hover {
-        background-color: $bg-primary;
+        background-color: color(primary, bg);
       }
 
       &.active {
-        color: $primary;
+        color: color(primary, base);
 
         &:before {
           content: '';
@@ -42,7 +42,7 @@
           position: absolute;
           top: 0;
           left: 0;
-          background-color: $primary;
+          background-color: color(primary, base);
         }
       }
     }
@@ -54,7 +54,7 @@
         display: block;
         padding: 10px 0;
       }
-      img {
+      svg {
         width: 60px;
       }
     }
