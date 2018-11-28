@@ -3,9 +3,17 @@ body, html {
   position: relative;
 }
 
+main{
+    display: block;
+    padding: 2 * $gap;
+}
+
+
+
 body {
   font-family: "Rubik";
   background: color(primary, bg);
   color:$text-color;
-  font-weight: 100;
+  font-weight: 300;
 } 
+

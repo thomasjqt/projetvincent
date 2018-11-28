@@ -11,6 +11,27 @@ $geographie:$primary;
 $physique:#ffbc34;
 $histoire:#2F2F2F;
 $text-color:lighten(desaturate($primary, 90%), 30%);
+$gap:15px;
+
+
+$ff-body:     'Rubik', Roboto, 'Open Sans', Arial, sans-serif; 
+    $fz-body:   16px; 
+$ff-title:    'Rubik', Arial, sans-serif;
+
+    $fz-h1:     26px; 
+    $fz-h2:     21px;
+    $fz-h3:     18px;
+    $fz-h4:     16px;
+
+    // $fz-h1-t:   30px; 
+    // $fz-h2-t:   25px;
+    // $fz-h3-t:   18px;
+    // $fz-h4-t:   16px;
+
+    // $fz-h1-m:   25px; 
+    // $fz-h2-m:   18px;
+    // $fz-h3-m:   16px;
+    // $fz-h4-m:   14px;
 
 $colors: (
   primary: (
