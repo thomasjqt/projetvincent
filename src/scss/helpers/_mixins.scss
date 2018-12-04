@@ -1,40 +1,47 @@
 
 // variable prefixes for CSS4 output
-$color-prefix: --color-;
+$color-prefix: '--';
 
 // retrieve color from map with Sass ie. `color(primary, base)`
-@function color($color-name, $color-variant:null) {
+@function varFunction($type, $color-name, $color-variant:null) {
   // color variant is optional
   @if ($color-variant != null) {
     // map inception, need two names
-    @return var(#{$color-prefix}#{$color-name}-#{$color-variant});
+    @return var(#{$color-prefix}#{$type}-#{$color-name}-#{$color-variant});
   } @else {
     // single-level color, one name
-    @return var(#{$color-prefix}#{$color-name});
+    @return var(#{$color-prefix}#{$type}-#{$color-name});
+  }
+}
+
+@function color($color-name, $color-variant:null) {
+  @return varFunction('color', $color-name, $color-variant);
+}
+
+@function font($color-name, $color-variant:null) {
+  @return varFunction('font', $color-name, $color-variant);
+}
+
+@mixin --var($type, $object) {
+  // each item in color map
+  @each $name, $color in $object {
+    // maps require a second loop
+    @if type-of($color) == "map" {
+      // each item in sub map
+      @each $subname, $subcolor in $color {  
+        // --color-primary-base
+        #{$color-prefix}#{$type}-#{$name}-#{$subname}: $subcolor;
+      }
+    // normal colors
+    } @elseif type-of($color) == "color" {
+      // --color-background
+      #{$color-prefix}#{$type}-#{$name}: $color;
+    }
   }
 }
 
 /* ripped CSS4 vars out of color map */
 :root {
-  
-  // each item in color map
-  @each $name, $color in $colors {
-    
-    // maps require a second loop
-    @if type-of($color) == "map" {
-      
-      // each item in sub map
-      @each $subname, $subcolor in $color {  
-        // --color-primary-base
-        #{$color-prefix}#{$name}-#{$subname}: $subcolor;
-      }
-    
-    // normal colors
-    } @elseif type-of($color) == "color" {
-      
-      // --color-background
-      #{$color-prefix}#{$name}: $color;
-      
-    }
-  }
+  @include --var('color', $colors);
+  @include --var('font', $fonts);
 }

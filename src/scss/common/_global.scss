@@ -1,5 +1,5 @@
 body, html {
-  height: 100%;
+  height:   100%;
   position: relative;
 }
 
@@ -12,8 +12,8 @@ main{
 
 body {
   font-family: "Rubik";
-  background: color(primary, bg);
-  color:$text-color;
   font-weight: 300;
+  color:       color(text-color, base);
+  background:  color(primary, bg);
 } 
 

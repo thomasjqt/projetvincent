@@ -1,54 +1,97 @@
 /*———————————————————————————————————*\
     $ COLORS
 \*———————————————————————————————————*/
-$primary:#009efb;
-$primary-l1: lighten($primary, 15%);
-$primary-d1: darken($primary, 15%);
-$math:#f62d51;
-$chinois:#55ce63;
-$anglais:#7460ee;
-$geographie:$primary;
-$physique:#ffbc34;
-$histoire:#2F2F2F;
-$text-color:lighten(desaturate($primary, 90%), 30%);
-$gap:15px;
+$primary:       #009efb;
+$primary-light: lighten($primary, 15%);
+$primary-dark:  darken($primary, 15%);
+
+$text-color:    lighten(desaturate($primary, 90%), 30%);
+
+/*------------------*\
+    $ Matières
+\*------------------*/
+$math:       #f62d51;
+$chinois:    #55ce63;
+$anglais:    #7460ee;
+$geographie: $primary;
+$physique:   #ffbc34;
+$histoire:   #2F2F2F;
 
 
-$ff-body:     'Rubik', Roboto, 'Open Sans', Arial, sans-serif; 
-    $fz-body:   16px; 
-$ff-title:    'Rubik', Arial, sans-serif;
+/*———————————————————————————————————*\
+    $ FONTS
+\*———————————————————————————————————*/
+$ff-body:   'Rubik', Roboto, 'Open Sans', Arial, sans-serif; 
+  $fz-body:   16px; 
 
-    $fz-h1:     26px; 
-    $fz-h2:     21px;
-    $fz-h3:     18px;
-    $fz-h4:     16px;
+$ff-title:  'Rubik', Arial, sans-serif;
+  $fz-h1:     26px; 
+  $fz-h2:     21px;
+  $fz-h3:     18px;
+  $fz-h4:     16px;
 
-    // $fz-h1-t:   30px; 
-    // $fz-h2-t:   25px;
-    // $fz-h3-t:   18px;
-    // $fz-h4-t:   16px;
+  // $fz-h1-t:   30px; 
+  // $fz-h2-t:   25px;
+  // $fz-h3-t:   18px;
+  // $fz-h4-t:   16px;
 
-    // $fz-h1-m:   25px; 
-    // $fz-h2-m:   18px;
-    // $fz-h3-m:   16px;
-    // $fz-h4-m:   14px;
-
-$colors: (
-  primary: (
-    base: $primary,
-    light: $primary-l1,
-    dark:  $primary-d1,
-    bg:    lighten(desaturate($primary, 55%), 46%),
-    gradiant: linear-gradient(to right, $primary-d1 0%, $primary-l1 100%)
-  )
-);
-
-
-
-// $bg-primary: lighten($primary, 45);
+  // $fz-h1-m:   25px; 
+  // $fz-h2-m:   18px;
+  // $fz-h3-m:   16px;
+  // $fz-h4-m:   14px;
 
 
 /*———————————————————————————————————*\
     $ DIMENTIONS
 \*———————————————————————————————————*/
 $sidebarWidth: 200px;
+$gap:          15px;
+
+
+/*————————————————————————————————————————————*\
+    $ VARIABLE FOR MIXIN : color() | font()
+\*————————————————————————————————————————————*/
+$fonts: (
+  body: (
+    size:   $fz-body,
+    family: $ff-body
+  ),
+  title: (
+    family: $ff-title,
+    h1:     $fz-h1,
+    h2:     $fz-h2,
+    h3:     $fz-h3,
+    h4:     $fz-h4,
+  )
+);
+
+$colors: (
+  primary: (
+    base:     $primary,
+    light:    $primary-light,
+    dark:     $primary-dark,
+    bg:       lighten(desaturate($primary, 55%), 46%),
+    gradiant: linear-gradient(to right, $primary-dark 0%, $primary-light 100%),
+  ),
+  text-color: (
+    base: $text-color
+  ),
+  math: (
+    base: $math,
+  ),
+  chinois: (
+    base: $chinois,
+  ),
+  anglais: (
+    base: $anglais,
+  ),
+  geographie: (
+    base: $geographie,
+  ),
+  physique: (
+    base: $physique,
+  ),
+  histoire: (
+    base: $histoire,
+  )
+);

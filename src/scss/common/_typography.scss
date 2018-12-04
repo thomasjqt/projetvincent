@@ -1,32 +1,34 @@
 body{
-  font-family:$ff-body;
+  font-size:   font(body, size);
+  font-family: font(body, family);
   font-weight: 300;
-  font-size: $fz-body;
 }
 
 h1, .h1,
 h2, .h2,
 h3, .h3,
-h4, .h4{
-  font-family: $ff-title;
-  font-weight: 300; 
-  margin: 0;
+h4, .h4{ 
+  margin:      0;
+  font-family: font(title, family);
+  font-weight: 300;
 }
 
 h1, .h1 {
-  font-size: $fz-h1;
+  font-size: font(title, h1);
 }
+
 h2, .h2 {
-  font-size: $fz-h2;
-  color: $primary;
   margin-bottom: 30px;
+  font-size:     font(title, h2);
+  color:         color(primary, base);
 }
+
 h3, .h3 {
-  font-size: $fz-h3;
-  
+  font-size: font(title, h3);
 }
+
 h4, .h4 {
-  font-size: $fz-h4;
+  font-size: font(title, h4);
 } 
 
 
